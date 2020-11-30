@@ -6,24 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <style>
-        button {
-            padding: 50px;
-        }
-    </style>
+    
 </head>
 
 <body>
-    <video id="myVideo" width="500" height="300" controls loop autoplay>
-        <source src="../assets/video/Valorant Jett - Animated Wallpaper [Fanmade] - YouTube.mkv" type="video/mp4">
-    </video>
-    <button onclick="setTime()">Go to 1 min</button>
-    <button onclick="getTime()">Get Time</button>
-    <div id="myTime">
-        <h3 id="0s">0s --> 10s</h3>
-        <h3 id="5s">5s --> 10s</h3>
-        <h3 id="10s">10s --> end</h3>
-    </div>
+    <header>
+        <div class="banner">
+            <div class="background-banner">
+                <img src="../assets/img/banner.png" alt="banner">
+                <img src="../assets/img/Vector 5.png" alt="vector">
+            </div>
+
+            <div class="nav">
+                <div class="logo">
+                    <img src="../assets/img/logo.png" alt="logo">
+                    <h5>MeeyTeam</h5>
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li>Tính năng</li>
+                        <li>Cộng đồng</li>
+                        <li>Bảo mật</li>
+                        <li>Trợ giúp</li>
+                        <li>Liên hệ </li>
+                    </ul>
+                </div>
+                <div class="language">
+                    <img src="../assets/img/icon/planet-earth 1.png" alt="earth">
+                    <p>Tiếng việt</p>
+                    <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                </div>
+                <div class="btn-download">Tải ngay</div>
+            </div>
+
+
+
+            <div class="custom-shape-divider-bottom-1606731045">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="custom-shape-divider-bottom-1606731080">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+        
+    </header>
+
+    <section style="display: none;">
+        <div class="main-title">
+            <div class="bg-title">Chức năng đa dạng</div>
+            <div class="sm-title">Hãy cùng khám phá những tính năng hấp dẫn của MeeyTeam</div>
+        </div>
+        <div class="main-function">
+            <div class="col-contents">
+                <div class="child-content chat" data-time="0s">
+                    <div class="icon-function">
+                        <img src="../assets/img/icon/chat.png" alt="">
+                    </div>
+                    <div class="title-function">Trò chuyện</div>
+                    <div class="content-function">
+                        Tạo và tham gia các nhóm trò chuyện với bạn bè, đồng nghiệp và gia đình
+                    </div>
+                    <div class="arrow">
+                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                    </div>
+                </div>
+                <div class="child-content call" data-time="5s">
+                    <div class="icon-function">
+                        <img src="../assets/img/icon/call.png" alt="">
+                    </div>
+                    <div class="title-function">Gọi điện miễn phí</div>
+                    <div class="content-function">
+                        Thực hiện cuộc gọi rõ ràng và chuyển sang video dễ dàng
+                    </div>
+                    <div class="arrow">
+                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                    </div>
+                </div>
+                <div class="child-content video" data-time="10s">
+                    <div class="icon-function">
+                        <img src="../assets/img/icon/video.png" alt="">
+                    </div>
+                    <div class="title-function">Họp video trực tuyến</div>
+                    <div class="content-function">
+                        Trải nghiệm âm thanh, hình ảnh chất lượng cao trong cuộc gọi 1-1 hoặc gọi nhóm
+                    </div>
+                    <div class="arrow">
+                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-video">
+                <video id="videoFunction" height="600px" loop autoplay playsinline muted>
+                    <source src="../assets/video/ipX5.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-contents">
+                <div class="child-content share-screen" data-time="15s">
+                    <div class="icon-function">
+                        <img src="../assets/img/icon/sharescreen.png" alt="">
+                    </div>
+                    <div class="title-function">Chia sẻ màn hình</div>
+                    <div class="content-function">
+                        Chia sẻ màn hình hoặc bất cứ thứ gì trên màn hình của bạn trong khi họp trực tuyến
+                    </div>
+                    <div class="arrow">
+                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                    </div>
+                </div>
+                <div class="child-content create-accout" data-time="20s">
+                    <div class="icon-function">
+                        <img src="../assets/img/icon/createuser.png" alt="">
+                    </div>
+                    <div class="title-function">Tạo hộ tài khoản</div>
+                    <div class="content-function">
+                        Chia sẻ màn hình hoặc bất cứ thứ gì trên màn hình của bạn trong khi họp trực tuyến
+                    </div>
+                    <div class="arrow">
+                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                    </div>
+                </div>
+                <div class="child-content link-group" data-time="25s">
+                    <div class="icon-function">
+                        <img src="../assets/img/icon/linkgroup.png" alt="">
+                    </div>
+                    <div class="title-function">Phát triển đội nhóm</div>
+                    <div class="content-function">
+                        Cho phép thành viên thêm bạn bè vào nhóm bằng liên kết mời
+                    </div>
+                    <div class="arrow">
+                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="../assets/js/index.js"></script>
 </body>
 

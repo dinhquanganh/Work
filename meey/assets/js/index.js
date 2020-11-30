@@ -1,57 +1,54 @@
-let myVideo = document.getElementById("myVideo");
-let myTime = document.getElementById("myTime").children;
-var setTime = () => {
-  myVideo.currentTime = 60;
-};
-var timeArray = [0, 5, 10];
-myVideo.ontimeupdate = actionChangeTimeline;
-function actionChangeTimeline () {
-  let currentTime = myVideo.currentTime;
+let videoFunc = document.getElementById("videoFunction");
+let myChildrenFunc = document.getElementsByClassName("child-content");
+let myArrowFunc = document.getElementsByClassName("arrow");
+let myIconFunc = document.getElementsByClassName("icon-function");
+// var setTime = () => {
+//   videoFunc.currentTime = 60;
+// };
+var timeArray = [0, 5, 10, 15, 20, 25];
+videoFunc.ontimeupdate = actionChangeTimeline;
+function actionChangeTimeline() {
+  let currentTime = videoFunc.currentTime;
   let chooseTime;
   for (let i = 0; i < timeArray.length; i++) {
     if (i !== timeArray.length - 1) {
       chooseTime =
         currentTime >= timeArray[i] && currentTime < timeArray[i + 1];
-      console.log(chooseTime);
     } else {
       chooseTime = currentTime >= timeArray[i];
-      console.log(chooseTime);
     }
 
     if (chooseTime === true) {
-      for (let j = 0; j < myTime.length; j++) {
-        myTime[j].style.color = "black";
-      }
-      document.getElementById(`${timeArray[i]}s`).style.color = "red";
+      removeActive();
+      let thisDoc = document.querySelector(`div[data-time="${timeArray[i]}s"]`);
+      thisDoc.classList.add("active");
+      thisDoc.children[3].style.display = "block";
+      thisDoc.children[0].style.filter = "saturate(8)";
+      break;
     }
   }
-};
+}
 
-// var vid = document.getElementById("featured-video");
-// vid.ontimeupdate = currentFeature;
-
-// function currentFeature(e) {
-//   var x = vid.currentTime;
-
-//   for (var i = 0; i < timeArray.length; i++) {
-//     var time =
-//       i !== timeArray.length - 1
-//         ? x >= timeArray[i] && x < timeArray[i + 1]
-//         : x >= timeArray[i];
-
-//     var el = $(".video-point" + (i + 1));
-//     if (!el.hasClass("active") && time) {
-//       $(".point").removeClass("active");
-//       el.addClass("active");
-//     }
-//   }
-// }
-
-// jQuery(".point").each(function (i, el) {
-//   $(this).on("click", function () {
-//     jQuery(".point").removeClass("active");
-//     var className = "video-point" + i + 1;
-//     jQuery("." + className).addClass("active");
-//     vid.currentTime = timeArray[i];
-//   });
-// });
+function removeActive() {
+  for (let e = 0; e < myChildrenFunc.length; e++) {
+    // if (myChildrenFunc[e].classList.indexOf("active")) {
+    myChildrenFunc[e].classList.remove("active");
+    // }
+  }
+  for (let e = 0; e < myArrowFunc.length; e++) {
+    myArrowFunc[e].style.display = "none";
+  }
+  for (let e = 0; e < myIconFunc.length; e++) {
+    myIconFunc[e].style.filter = "none";
+  }
+}
+(() => {
+  for (let i = 0; i < myChildrenFunc.length; i++) {
+    console.log(myChildrenFunc[i]);
+    myChildrenFunc[i].onclick = function () {
+      let time = myChildrenFunc[i].getAttribute("data-time").replace("s", "");
+      console.log(time);
+      videoFunc.currentTime = time;
+    };
+  }
+})();
