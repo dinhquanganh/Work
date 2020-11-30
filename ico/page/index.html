@@ -27,9 +27,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/kit-fontawesome.min.js"></script>
+
 </head>
 
 <body>
@@ -42,7 +43,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="../assets/images/logo.svg" alt="Logo"/>
+                        <img src="../assets/images/logo.svg" alt="Logo" />
                     </div>
                     <div class="col-md-6">
                         <ul class="box_menu">
@@ -60,7 +61,6 @@
                     <p>Great Revolution in Era 4.0 – A perfect combination of: People + Artificial Intelligence + Real
                         Estate + Financial Investment</p>
                 </div>
-
             </div>
         </section>
 
@@ -223,45 +223,45 @@
         <!-- end_section_about -->
 
         <section id="product" class="section_frame web-ver">
-            <div class="container">
+            <div class="container" id="content-product">
                 <div class="row">
                     <p class="title"><span></span>WHAT IS MEEYLAND ECOSYSTEM</p>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-id" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_1.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-link" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_2.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-map" onclick="listProduct(this.id)">
                         <span> <img src="../assets/images/frame_3.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-chat" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_4.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-crm" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_5.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-3d" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_6.png" alt=""></span>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-project" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_7.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-pay" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_8.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-notary" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_9.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-wallet" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_10.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-ads" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_11.png" alt=""></span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2" id="meey-socical" onclick="listProduct(this.id)">
                         <span><img src="../assets/images/frame_12.png" alt=""></span>
                     </div>
                 </div>
@@ -361,7 +361,7 @@
                                         </div>
                                         <div class="col-md-3" onclick="showModalState(6,'web');">
                                             <img src="../assets/images/slice_6.png" alt="">
-                                            <div class="timeline-content-item" >
+                                            <div class="timeline-content-item">
                                                 <p>Product development MeeyCapital, MeeySmartCity</p>
                                                 <p>A lifetime of digital real estate exchanges with excellent
                                                     applications /
@@ -1071,7 +1071,7 @@
             }, 'JSON');
         }
 
-        
+
     </script>
     <script src="../assets/js/app.js"></script>
 </body>

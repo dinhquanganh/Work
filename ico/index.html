@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background-color: rgb(255, 251, 0);
+            transition: all 0.5s;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        div a {
+            text-decoration: none;
+        }
+
+        div:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="join">
+       JOIN
+    </div>
+    <script>
+        document.getElementById("join").addEventListener("click", () => {
+            location.href = "./page/index.html"
+        })
+    </script>
+</body>
+
+</html>

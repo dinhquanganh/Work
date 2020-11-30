@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        button {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="myVideo" width="500" height="300" controls loop autoplay>
+        <source src="../assets/video/Valorant Jett - Animated Wallpaper [Fanmade] - YouTube.mkv" type="video/mp4">
+    </video>
+    <button onclick="setTime()">Go to 1 min</button>
+    <button onclick="getTime()">Get Time</button>
+    <div id="myTime">
+        <h3 id="0s">0s --> 10s</h3>
+        <h3 id="5s">5s --> 10s</h3>
+        <h3 id="10s">10s --> end</h3>
+    </div>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>

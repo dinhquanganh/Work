@@ -355,12 +355,11 @@ ul {
 .section_top ul.box_menu li.menu_item:last-child a {
   color: #fff !important;
   -webkit-text-fill-color: #fff;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s;
 }
 
 .section_top ul.box_menu li.menu_item:last-child:hover {
-  /*   
-  font-weight: bold; */
+  font-weight: bold;
   transition: all 0.3s;
   background-position: 100% 0;
 }
@@ -567,10 +566,12 @@ ul {
   align-items: flex-start;
   padding: 6px 20px;
   border: none;
+  transition: all 1s ease-in-out;
 }
 
 .section_timeline p button:hover {
   font-weight: bold;
+  transition: all 1s ease-in-out;
 }
 
 footer {
