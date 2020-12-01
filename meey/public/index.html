@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    
+
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="banner">
             <div class="background-banner">
                 <img src="../assets/img/banner.png" alt="banner">
-                <img src="../assets/img/Vector 5.png" alt="vector">
+                <!-- <img src="../assets/img/Vector 5.png" alt="vector"> -->
             </div>
 
             <div class="nav">
@@ -24,38 +24,220 @@
                 </div>
                 <div class="nav-link">
                     <ul>
-                        <li>Tính năng</li>
-                        <li>Cộng đồng</li>
-                        <li>Bảo mật</li>
-                        <li>Trợ giúp</li>
-                        <li>Liên hệ </li>
+                        <li> <a href="">Tính năng</a> </li>
+                        <li><a href="">Cộng đồng</a> </li>
+                        <li><a href="">Bảo mật</a> </li>
+                        <li><a href="">Trợ giúp</a> </li>
+                        <li><a href="">Liên hệ </a> </li>
                     </ul>
                 </div>
-                <div class="language">
-                    <img src="../assets/img/icon/planet-earth 1.png" alt="earth">
-                    <p>Tiếng việt</p>
-                    <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                <div id="language">
+                    <div class="btnDropDw">
+                        <img class="earth" src="../assets/img/icon/planet-earth 1.png" alt="earth">
+                        <p>Tiếng việt</p>
+                        <img onclick="showDropdown()" class="arrow" src="../assets/img/icon/Arrow-nav.png" alt="">
+                    </div>
+                    <div id="list-lang">
+                        <a href="">English</a>
+                        <a href="">English</a>
+                    </div>
                 </div>
-                <div class="btn-download">Tải ngay</div>
+                <a href="#">
+                    <div class="btn-download">
+                        Tải ngay
+                    </div>
+                </a>
+            </div>
+
+            <div class="content-banner">
+                <h1>MeeyTeam</h1>
+                <p class="introduce-banner">
+                    Ứng dụng hỗ trợ giao tiếp thông minh kết nối bạn bè và xây dựng đội nhóm
+                </p>
+                <div class="list-func-produce">
+                    <ul>
+                        <li>Trò chuyện và gọi video miễn phí </li>
+                        <li>Kết nối cộng đồng và mở rộng mạng lưới liên kết</li>
+                        <li>Tổ chức và quản lý cuộc họp với đội nhóm của bạn</li>
+                    </ul>
+                </div>
+                <div class="download-app">
+                    <div class="qr-code">
+                        <img src="../assets/img/qr-code (1) 1.png" alt="">
+                    </div>
+                    <div class="link-download">
+                        <img src="../assets/img/appstore.png" alt="">
+                        <img src="../assets/img/ggplay.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="big-image-banner">
+                <img src="../assets/img/phone-banner.png" alt="">
             </div>
 
 
 
             <div class="custom-shape-divider-bottom-1606731045">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
                 </svg>
             </div>
             <div class="custom-shape-divider-bottom-1606731080">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
                 </svg>
             </div>
         </div>
-        
-    </header>
 
-    <section ">
+    </header>
+    <!-- salient features --------------------->
+    <section>
+        <div id="salient-features">
+            <div class="title-section-left">
+                <img src="../assets/img/icon/Polygon 1.png" alt="">
+                <h3>Tính năng nổi bật</h3>
+            </div>
+            <div class="main-feature">
+                <div class="feature-box">
+                    <div class="backgr-fea">
+                        <img src="../assets/img/icon/Rectangle 39.png" alt="">
+                        <img src="../assets/img/icon/Vector 56.png" alt="">
+                        <img src="../assets/img/icon/Ellipse 61.png" alt="">
+                    </div>
+                    <img class="img-z1" src="../assets/img/icon/img-welcome.png" alt="">
+
+                    <div class="title-fea">Chia sẻ mọi thứ</div>
+                    <div class="content-fea">Chia sẻ miễn phí văn bản, tin nhắn giọng nói, hình ảnh, video, ảnh động
+                        sinh động và tập tin chỉ với điện thoại thông minh và kết nối internet của bạn</div>
+                </div>
+                <div class="feature-box">
+                    <div class="backgr-fea">
+                        <img src="../assets/img/icon/Rectangle 39-yl.png" alt="">
+                        <img src="../assets/img/icon/Vector 562.png" alt="">
+                    </div>
+                    <img class="img-z1" src="../assets/img/icon/img-onboarding-01.png" alt="">
+                    <div class="title-fea">Giao tiếp hiệu quả</div>
+                    <div class="content-fea">Thực hiện các cuộc gọi và gọi video rõ nét, trò chuyện với mọi người mà
+                        không tốn cước di động</div>
+                </div>
+                <div class="feature-box">
+                    <div class="backgr-fea">
+                        <img src="../assets/img/icon/Rectangle 39-yl.png" alt="">
+                        <img src="../assets/img/icon/Ellipse 612.png" alt="">
+                    </div>
+                    <img class="img-z1" src="../assets/img/icon/img-onboarding-02.png" alt="">
+                    <div class="title-fea">Gắn kết đội ngũ</div>
+                    <div class="content-fea">Tạo và quản lý nhóm của bạn một cách dễ dàng giúp đội ngũ của bạn truyền
+                        đạt và tiếp cận thông tin một cách kịp thời nhất
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="backgr-fea">
+                        <img src="../assets/img/icon/Rectangle 39.png" alt="">
+                        <img src="../assets/img/icon/Vector 564.png" alt="">
+                        <img src="../assets/img/icon/Ellipse 614.png" alt="">
+                    </div>
+                    <img class="img-z1" src="../assets/img/icon/img-onboarding-03.png" alt="">
+                    <div class="title-fea">Họp trực tuyến tin cậy</div>
+                    <div class="content-fea">Thiết lập và tham gia các họp ở bất kì đâu, bất kì lúc nào chỉ với điện
+                        thoại thông minh và kết nối mạng di động</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Xây dựng đội ngũ ---------------------->
+    <section>
+        <div id="team-bulding">
+            <div class="title-section-left">
+                <img src="../assets/img/icon/Polygon 1.png" alt="">
+                <h3>Xây dựng đội ngũ</h3>
+            </div>
+            <div class="main-bulding">
+                <div class="team-bulding-box">
+                    <p>Danh bạ hiển thị trực quan, nhanh chóng tìm thấy thành viên trong nhóm để bắt đầu trò chuyện
+                        ngay lập tức.
+                        Bạn cũng có thể kết nối với thành viên khác của MeeyMember.
+                        <br>
+                        <br>
+                        Ngoài ra ứng dụng còn hỗ trợ nhiều tính năng hấp dẫn dành cho phát triển đội ngũ:
+                    </p>
+                </div>
+                <div class="team-bulding-box">
+                    <div class="contain-sec-bx">
+                        <div class="icon-contain">
+                            <img src="../assets/img/icon/mess.png" alt="">
+                        </div>
+                        <div class="title-contain-box">
+                            <div class="title-contain">Gửi tin nhắn </div>
+                            <div class="content-contain">Gửi tin nhắn văn bản, hình ảnh, video hoặc tập tin cho bạn bè hoặc
+                                đội nhóm của bạn</div>
+                        </div>
+                    </div>
+                    <div class="contain-sec-bx">
+                        <div class="icon-contain">
+                            <img src="../assets/img/icon/video_call-solid-tb.png" alt="">
+                        </div>
+                        <div class="title-contain-box">
+                            <div class="title-contain">Thực hiện cuộc gọi thoại và video</div>
+                            <div class="content-contain">Thực hiện cuộc gọi thoại và chuyển sang video dễ dàng</div>
+                        </div>
+                    </div>
+                    <div class="contain-sec-bx">
+                        <div class="icon-contain">
+                            <img src="../assets/img/icon/mess.png" alt="">
+                        </div>
+                        <div class="title-contain-box">
+                            <div class="title-contain">...</div>
+                            <div class="content-contain">...</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="img-tb-box">
+                <img src="../assets/img/ipX.png" alt="">
+                <img src="../assets/img/ipX2.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Họp trực tuyến bất kỳ đâu -->
+    <section>
+        <div id="meeting-online">
+            <div class="title-section-left">
+                <img src="../assets/img/icon/Polygon 1.png" alt="">
+                <h3>Họp trực tuyến bất kỳ đâu</h3>
+            </div>
+            <div class="main-mo">
+                <div class="content-mo">
+                    Dễ dàng tạo phòng họp, lên lịch họp và tham gia một phòng họp với nhóm của bạn hoặc qua đường dẫn chia sẻ
+                </div>
+                <div class="func-mo-box">
+                    <div class="func-mo">
+                        <img src="" alt="">
+                        
+                    </div>
+                    <div class="func-mo"></div>
+                </div>
+            </div>
+            <div class="img-mo-box">
+                <img src="../assets/img/ipX3.png" alt="">
+                <img src="../assets/img/ipX4.png" alt="">
+            </div>
+
+        </div>
+    </section>
+    <!-- FUNCTION---------------------------- -->
+    <section>
         <div class="main-title">
             <div class="bg-title">Chức năng đa dạng</div>
             <div class="sm-title">Hãy cùng khám phá những tính năng hấp dẫn của MeeyTeam</div>
@@ -71,7 +253,7 @@
                         Tạo và tham gia các nhóm trò chuyện với bạn bè, đồng nghiệp và gia đình
                     </div>
                     <div class="arrow">
-                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                        <img src="../assets/img/icon/Arrow - Right-func.png" alt="">
                     </div>
                 </div>
                 <div class="child-content call" data-time="5s">
@@ -83,7 +265,7 @@
                         Thực hiện cuộc gọi rõ ràng và chuyển sang video dễ dàng
                     </div>
                     <div class="arrow">
-                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                        <img src="../assets/img/icon/Arrow - Right-func.png" alt="">
                     </div>
                 </div>
                 <div class="child-content video" data-time="10s">
@@ -95,7 +277,7 @@
                         Trải nghiệm âm thanh, hình ảnh chất lượng cao trong cuộc gọi 1-1 hoặc gọi nhóm
                     </div>
                     <div class="arrow">
-                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                        <img src="../assets/img/icon/Arrow - Right-func.png" alt="">
                     </div>
                 </div>
             </div>
@@ -114,7 +296,7 @@
                         Chia sẻ màn hình hoặc bất cứ thứ gì trên màn hình của bạn trong khi họp trực tuyến
                     </div>
                     <div class="arrow">
-                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                        <img src="../assets/img/icon/Arrow - Right-func.png" alt="">
                     </div>
                 </div>
                 <div class="child-content create-accout" data-time="20s">
@@ -126,7 +308,7 @@
                         Chia sẻ màn hình hoặc bất cứ thứ gì trên màn hình của bạn trong khi họp trực tuyến
                     </div>
                     <div class="arrow">
-                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                        <img src="../assets/img/icon/Arrow - Right-func.png" alt="">
                     </div>
                 </div>
                 <div class="child-content link-group" data-time="25s">
@@ -138,7 +320,7 @@
                         Cho phép thành viên thêm bạn bè vào nhóm bằng liên kết mời
                     </div>
                     <div class="arrow">
-                        <img src="../assets/img/icon/Arrow - Right 2.png" alt="">
+                        <img src="../assets/img/icon/Arrow - Right-func.png" alt="">
                     </div>
                 </div>
             </div>

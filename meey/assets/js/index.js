@@ -1,10 +1,8 @@
+// Function Produce
 let videoFunc = document.getElementById("videoFunction");
 let myChildrenFunc = document.getElementsByClassName("child-content");
 let myArrowFunc = document.getElementsByClassName("arrow");
 let myIconFunc = document.getElementsByClassName("icon-function");
-// var setTime = () => {
-//   videoFunc.currentTime = 60;
-// };
 var timeArray = [0, 5, 10, 15, 20, 25];
 videoFunc.ontimeupdate = actionChangeTimeline;
 function actionChangeTimeline() {
@@ -28,7 +26,6 @@ function actionChangeTimeline() {
     }
   }
 }
-
 function removeActive() {
   for (let e = 0; e < myChildrenFunc.length; e++) {
     // if (myChildrenFunc[e].classList.indexOf("active")) {
@@ -52,3 +49,24 @@ function removeActive() {
     };
   }
 })();
+
+// Dropdown
+function showDropdown() {
+  let languageDropdown = document.querySelector(".btnDropDw");
+  let listLang = document.querySelector("#list-lang");
+  listLang.style.display = "block";
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".btnDropDw")) {
+    var dropdowns = document.querySelector("#list-lang");
+    if (dropdowns.style.display == "block") {
+      dropdowns.style.display = "none";
+    }
+  }
+};
+
+// Scroll
+window.addEventListener("scroll", () => {
+  document.querySelector(".nav").classList.toggle("sticky", window.scrollY > 0);
+});
