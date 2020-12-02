@@ -70,3 +70,15 @@ window.onclick = function (event) {
 window.addEventListener("scroll", () => {
   document.querySelector(".nav").classList.toggle("sticky", window.scrollY > 0);
 });
+
+//
+// Scroll to element
+function scrollToElement(id) {
+  const element = document.querySelector(`#${id}`);
+  const topPos = element.getBoundingClientRect().top + window.pageYOffset;
+
+window.scrollTo({
+top: topPos-100, 
+behavior: 'smooth'
+})
+}

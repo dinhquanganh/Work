@@ -1,0 +1,33 @@
+/* RESPONSIVE */
+@media only screen and (max-width: 1439px) {
+  .nav .nav-link {
+    width: 35vw;
+  }
+  .nav .nav-link ul li {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1325px) {
+  .nav {
+    padding: 20px 10vw;
+  }
+  .nav.sticky {
+    padding: 5px 10vw;
+  }
+  .nav #language {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .nav #language p {
+    padding: 0 5px;
+  }
+  .nav #language .btnDropDw {
+    padding: 10px 5px;
+  }
+  
+  .nav .nav-link ul li {
+    margin-right: 0;
+    padding: 10px;
+  }
+}

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 
 </head>
 
 <body>
+    <!-- HEADER(NAV+BANNER) -->
     <header>
         <div class="banner">
             <div class="background-banner">
@@ -24,8 +26,8 @@
                 </div>
                 <div class="nav-link">
                     <ul>
-                        <li> <a href="">Tính năng</a> </li>
-                        <li><a href="">Cộng đồng</a> </li>
+                        <li> <a href="#" onclick="scrollToElement('salient-features')">Tính năng</a> </li>
+                        <li ><a href="#" onclick="scrollToElement('team-building')">Cộng đồng</a> </li>
                         <li><a href="">Bảo mật</a> </li>
                         <li><a href="">Trợ giúp</a> </li>
                         <li><a href="">Liên hệ </a> </li>
@@ -99,7 +101,8 @@
         </div>
 
     </header>
-    <!-- salient features --------------------->
+
+    <!-- SALIENT FEATURES--------------------->
     <section>
         <div id="salient-features">
             <div class="title-section-left">
@@ -155,15 +158,16 @@
         </div>
 
     </section>
-    <!-- Xây dựng đội ngũ ---------------------->
+
+    <!-- TEAM-building---------------------->
     <section>
-        <div id="team-bulding">
+        <div id="team-building">
             <div class="title-section-left">
                 <img src="../assets/img/icon/Polygon 1.png" alt="">
                 <h3>Xây dựng đội ngũ</h3>
             </div>
-            <div class="main-bulding">
-                <div class="team-bulding-box">
+            <div class="main-building">
+                <div class="team-building-box">
                     <p>Danh bạ hiển thị trực quan, nhanh chóng tìm thấy thành viên trong nhóm để bắt đầu trò chuyện
                         ngay lập tức.
                         Bạn cũng có thể kết nối với thành viên khác của MeeyMember.
@@ -172,14 +176,15 @@
                         Ngoài ra ứng dụng còn hỗ trợ nhiều tính năng hấp dẫn dành cho phát triển đội ngũ:
                     </p>
                 </div>
-                <div class="team-bulding-box">
+                <div class="team-building-box">
                     <div class="contain-sec-bx">
                         <div class="icon-contain">
                             <img src="../assets/img/icon/mess.png" alt="">
                         </div>
                         <div class="title-contain-box">
                             <div class="title-contain">Gửi tin nhắn </div>
-                            <div class="content-contain">Gửi tin nhắn văn bản, hình ảnh, video hoặc tập tin cho bạn bè hoặc
+                            <div class="content-contain">Gửi tin nhắn văn bản, hình ảnh, video hoặc tập tin cho bạn bè
+                                hoặc
                                 đội nhóm của bạn</div>
                         </div>
                     </div>
@@ -201,7 +206,6 @@
                             <div class="content-contain">...</div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="img-tb-box">
@@ -210,32 +214,75 @@
             </div>
         </div>
     </section>
-    <!-- Họp trực tuyến bất kỳ đâu -->
+
+    <!-- MEETING-ONLINE -->
     <section>
         <div id="meeting-online">
             <div class="title-section-left">
                 <img src="../assets/img/icon/Polygon 1.png" alt="">
                 <h3>Họp trực tuyến bất kỳ đâu</h3>
             </div>
-            <div class="main-mo">
-                <div class="content-mo">
-                    Dễ dàng tạo phòng họp, lên lịch họp và tham gia một phòng họp với nhóm của bạn hoặc qua đường dẫn chia sẻ
+
+            <div class="main-meeting">
+                <div class="meet-o-box">
+                    <p>Dễ dàng tạo phòng họp, lên lịch họp và tham gia một phòng họp với nhóm của bạn hoặc qua đường dẫn
+                        chia sẻ
+                    </p>
                 </div>
-                <div class="func-mo-box">
-                    <div class="func-mo">
-                        <img src="" alt="">
-                        
+                <div class="meet-o-box">
+                    <div class="contain-meeting-bx">
+                        <div class="icon-contain">
+                            <img src="../assets/img/icon/mo1.png" alt="">
+                        </div>
+                        <div class="title-contain-box">
+                            <div class="title-contain">Tham gia họp trực tuyến chỉ với một click</div>
+                            <div class="content-contain">Dễ dàng tham gia cuộc họp trực tuyến với bạn bè qua đường dẫn
+                                chia sẻ</div>
+                        </div>
                     </div>
-                    <div class="func-mo"></div>
+                    <div class="contain-meeting-bx">
+                        <div class="icon-contain">
+                            <img src="../assets/img/icon/mo2.png" alt="">
+                        </div>
+                        <div class="title-contain-box">
+                            <div class="title-contain">Tổ chức cuộc họp nhóm trực tuyến</div>
+                            <div class="content-contain">Tổ chức cuộc hop trực tuyến với các thành viên khác trong nhóm
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contain-meeting-bx">
+                        <div class="icon-contain">
+                            <img src="../assets/img/icon/mo3.png" alt="">
+                        </div>
+                        <div class="title-contain-box">
+                            <div class="title-contain">Lên lịch họp </div>
+                            <div class="content-contain">Chủ động lên lịch họp từ bất cứ đâu và bất cứ lúc nào</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="img-mo-box">
                 <img src="../assets/img/ipX3.png" alt="">
                 <img src="../assets/img/ipX4.png" alt="">
             </div>
-
+            <div class="custom-shape-divider-top-1606832142">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+                    </path>
+                </svg>
+            </div>
+            <div class="custom-shape-divider-bottom-1606832267">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+                    </path>
+                </svg>
+            </div>
         </div>
     </section>
+
     <!-- FUNCTION---------------------------- -->
     <section>
         <div class="main-title">
@@ -326,6 +373,97 @@
             </div>
         </div>
     </section>
+
+    <!-- FOOTER------------------------------ -->
+    <footer>
+        <div id="footer-box">
+            <div class="bgr-footer">
+                <img src="../assets/img/footer.png" alt="">
+            </div>
+
+            <div class="main-footer">
+                <div class="content-footer-bx">
+                    <div class="content-bx">
+                        <h4>
+                            Hãy bắt đầu sử dụng MeeyTeam
+                            kết nối bạn bè và xây dựng đội nhóm của bạn
+                        </h4>
+                        <div class="download-app">
+                            <div class="qr-code">
+                                <img src="../assets/img/qr-code (1) 1.png" alt="">
+                            </div>
+                            <div class="link-download">
+                                <div class="ctn">
+                                    <img src="../assets/img/icon/fter-arrow.png" alt="">
+                                    <p>Tải app MeeyTeam ngay</p>
+                                </div>
+                                <div class="ctn">
+                                    <img src="../assets/img/appstore.png" alt="">
+                                    <img src="../assets/img/ggplay.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-bx">
+                        <img src="../assets/img/icon/img-onboarding-01.png" alt="">
+                    </div>
+                </div>
+                <div class="content-footer-bx">
+                    <div class="blur">
+                        <img src="../assets/img/footer-blur.png" alt="">
+                    </div>
+                    <div class="c-fter c-fter-1">
+                        <div class="logo-fter">
+                            <img src="../assets/img/icon/logo-trim 2.png" alt="">
+                            <h3>MeeyTeam</h3>
+                        </div>
+                        <div class="address">
+                            <p>Building 97-99 Lang Ha <br>
+                                Ba Dinh, Ha Noi</p>
+                            <p>info@meeyteam.com <br>
+                                0912-345-678</p>
+                        </div>
+                        <div class="copyright">
+                            © MeeyLand, 2020. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="c-fter c-fter-2">
+                        <div class="hyperlink">
+                            <div class="title-fter">About</div>
+                            <ul>
+                                <li>Profile</li>
+                                <li>Features</li>
+                                <li>Careers</li>
+                                <li>DW News</li>
+                            </ul>
+                        </div>
+                        <div class="hyperlink">
+                            <div class="title-fter">Help</div>
+                            <ul>
+                                <li>Support</li>
+                                <li>Sign Up</li>
+                                <li>Guide</li>
+                                <li>Reports</li>
+                                <li>Q&A</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="c-fter c-fter-3">
+                        <div class="title-fter">Social Media</div>
+                        <div class="social-network">
+                            <img src="../assets/img/icon/fter-f.png" alt="facebook">
+                            <img src="../assets/img/icon/fter-tw.png" alt="twitter">
+                            <img src="../assets/img/icon/fter-ins.png" alt="instagram">
+                        </div>
+                        <div class="chat">
+                            <img src="../assets/img/icon/fter-mess.png" alt="chat-me">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="../assets/js/index.js"></script>
 </body>
 
