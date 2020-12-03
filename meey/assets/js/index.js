@@ -15,7 +15,6 @@ function actionChangeTimeline() {
     } else {
       chooseTime = currentTime >= timeArray[i];
     }
-
     if (chooseTime === true) {
       removeActive();
       let thisDoc = document.querySelector(`div[data-time="${timeArray[i]}s"]`);
@@ -51,34 +50,20 @@ function removeActive() {
 })();
 
 // Dropdown
-function showDropdown() {
-  let languageDropdown = document.querySelector(".btnDropDw");
-  let listLang = document.querySelector("#list-lang");
-  listLang.style.display = "block";
+function tgMenuLang() {
+  const tgMenu = document.querySelector(".list-lang-menu");
+  tgMenu.classList.toggle("activeTg");
 }
-
-window.onclick = function (event) {
-  if (!event.target.matches(".btnDropDw")) {
-    var dropdowns = document.querySelector("#list-lang");
-    if (dropdowns.style.display == "block") {
-      dropdowns.style.display = "none";
-    }
-  }
-};
 
 // Scroll
 window.addEventListener("scroll", () => {
   document.querySelector(".nav").classList.toggle("sticky", window.scrollY > 0);
 });
 
-//
-// Scroll to element
-function scrollToElement(id) {
-  const element = document.querySelector(`#${id}`);
-  const topPos = element.getBoundingClientRect().top + window.pageYOffset;
 
-window.scrollTo({
-top: topPos-100, 
-behavior: 'smooth'
-})
-}
+const menuMobileToggle = document.querySelector(".menu-mobile");
+const menuMobileList = document.querySelector(".menu-mb");
+menuMobileToggle.onclick = function () {
+  menuMobileToggle.classList.toggle("active-menu-mobile");
+  menuMobileList.classList.toggle("active-list");
+};

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+
 
 </head>
 
@@ -14,10 +16,7 @@
     <!-- HEADER(NAV+BANNER) -->
     <header>
         <div class="banner">
-            <div class="background-banner">
-                <img src="../assets/img/banner.png" alt="banner">
-                <!-- <img src="../assets/img/Vector 5.png" alt="vector"> -->
-            </div>
+            <div class="background-banner"></div>
 
             <div class="nav">
                 <div class="logo">
@@ -26,29 +25,45 @@
                 </div>
                 <div class="nav-link">
                     <ul>
-                        <li> <a href="#" onclick="scrollToElement('salient-features')">Tính năng</a> </li>
-                        <li ><a href="#" onclick="scrollToElement('team-building')">Cộng đồng</a> </li>
-                        <li><a href="">Bảo mật</a> </li>
-                        <li><a href="">Trợ giúp</a> </li>
-                        <li><a href="">Liên hệ </a> </li>
+                        <li> <a href="#ss1">Tính năng</a> </li>
+                        <li><a href="#ss2">Cộng đồng</a> </li>
+                        <li><a href="#ss3">Bảo mật</a> </li>
+                        <li><a href="#ss4">Trợ giúp</a> </li>
+                        <li><a href="#ss5">Liên hệ </a> </li>
                     </ul>
                 </div>
-                <div id="language">
-                    <div class="btnDropDw">
-                        <img class="earth" src="../assets/img/icon/planet-earth 1.png" alt="earth">
-                        <p>Tiếng việt</p>
-                        <img onclick="showDropdown()" class="arrow" src="../assets/img/icon/Arrow-nav.png" alt="">
+                <div id="language-download">
+                    <div class="lang">
+                        <div class="btnDropDw" onclick="tgMenuLang()">
+                            <img class="earth" src="../assets/img/icon/planet-earth 1.png" alt="earth">
+                            <p>VI</p>
+                            <img class="arrowLang" src="../assets/img/icon/Arrow-nav.png" alt="">
+                        </div>
+                        <div class="list-lang-menu">
+                            <ul>
+                                <li><a href="">English</a></li>
+                                <li><a href="">Japanese</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="list-lang">
-                        <a href="">English</a>
-                        <a href="">English</a>
-                    </div>
+                    <a href="#" class="down">
+                        <div class="btn-download">
+                            Tải ngay
+                        </div>
+                    </a>
+                    <div class="menu-mobile">
+                        <div class="bgr-ct"></div>
+                    </div>  
+                    <ul class="menu-mb">
+                        <li><a href="#">Tính năng</a></li>
+                        <li><a href="#">Cộng đồng</a></li>
+                        <li><a href="#">Bảo mật</a></li>
+                        <li><a href="#">Trợ giúp</a></li>
+                        <li><a href="#">Liên hệ </a></li>
+                    </ul>
                 </div>
-                <a href="#">
-                    <div class="btn-download">
-                        Tải ngay
-                    </div>
-                </a>
+                
+                
             </div>
 
             <div class="content-banner">
@@ -79,88 +94,66 @@
             <div class="big-image-banner">
                 <img src="../assets/img/phone-banner.png" alt="">
             </div>
-
-
-
-            <div class="custom-shape-divider-bottom-1606731045">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="custom-shape-divider-bottom-1606731080">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
         </div>
 
     </header>
 
     <!-- SALIENT FEATURES--------------------->
-    <section>
+    <section id="ss1">
         <div id="salient-features">
             <div class="title-section-left">
                 <img src="../assets/img/icon/Polygon 1.png" alt="">
                 <h3>Tính năng nổi bật</h3>
             </div>
             <div class="main-feature">
-                <div class="feature-box">
-                    <div class="backgr-fea">
-                        <img src="../assets/img/icon/Rectangle 39.png" alt="">
-                        <img src="../assets/img/icon/Vector 56.png" alt="">
-                        <img src="../assets/img/icon/Ellipse 61.png" alt="">
-                    </div>
-                    <img class="img-z1" src="../assets/img/icon/img-welcome.png" alt="">
-
-                    <div class="title-fea">Chia sẻ mọi thứ</div>
-                    <div class="content-fea">Chia sẻ miễn phí văn bản, tin nhắn giọng nói, hình ảnh, video, ảnh động
+                <div class="feature-row">
+                    <div class="feature-box">
+                        <div class="stripe">
+                            <img src="../assets/img/icon/Vector 56.png" alt="">
+                            <img src="../assets/img/icon/Ellipse 61.png" alt="">
+                        </div>
+                        <div class="picture-ex"></div>
+                        <div class="title-fea">Chia sẻ mọi thứ</div>
+                        <div class="content-fea">Chia sẻ miễn phí văn bản, tin nhắn giọng nói, hình ảnh, video, ảnh động
                         sinh động và tập tin chỉ với điện thoại thông minh và kết nối internet của bạn</div>
-                </div>
-                <div class="feature-box">
-                    <div class="backgr-fea">
-                        <img src="../assets/img/icon/Rectangle 39-yl.png" alt="">
-                        <img src="../assets/img/icon/Vector 562.png" alt="">
                     </div>
-                    <img class="img-z1" src="../assets/img/icon/img-onboarding-01.png" alt="">
-                    <div class="title-fea">Giao tiếp hiệu quả</div>
-                    <div class="content-fea">Thực hiện các cuộc gọi và gọi video rõ nét, trò chuyện với mọi người mà
-                        không tốn cước di động</div>
-                </div>
-                <div class="feature-box">
-                    <div class="backgr-fea">
-                        <img src="../assets/img/icon/Rectangle 39-yl.png" alt="">
-                        <img src="../assets/img/icon/Ellipse 612.png" alt="">
-                    </div>
-                    <img class="img-z1" src="../assets/img/icon/img-onboarding-02.png" alt="">
-                    <div class="title-fea">Gắn kết đội ngũ</div>
-                    <div class="content-fea">Tạo và quản lý nhóm của bạn một cách dễ dàng giúp đội ngũ của bạn truyền
-                        đạt và tiếp cận thông tin một cách kịp thời nhất
+                    <div class="feature-box bxf2">
+                        <div class="stripe">
+                            <img src="../assets/img/icon/Vector 562.png" alt="">
+                        </div>
+                        <div class="picture-ex"></div>
+                        <div class="title-fea">Giao tiếp hiệu quả</div>
+                        <div class="content-fea">Thực hiện các cuộc gọi và gọi video rõ nét, trò chuyện với mọi người mà
+                            không tốn cước di động</div>
                     </div>
                 </div>
-                <div class="feature-box">
-                    <div class="backgr-fea">
-                        <img src="../assets/img/icon/Rectangle 39.png" alt="">
-                        <img src="../assets/img/icon/Vector 564.png" alt="">
-                        <img src="../assets/img/icon/Ellipse 614.png" alt="">
+                <div class="feature-row">
+                    <div class="feature-box bxf3">
+                        <div class="stripe">
+                            <img src="../assets/img/icon/Ellipse 612.png" alt="">
+                        </div>
+                        <div class="picture-ex"></div>
+                        <div class="title-fea">Gắn kết đội ngũ</div>
+                        <div class="content-fea">Tạo và quản lý nhóm của bạn một cách dễ dàng giúp đội ngũ của bạn truyền
+                            đạt và tiếp cận thông tin một cách kịp thời nhất</div>
                     </div>
-                    <img class="img-z1" src="../assets/img/icon/img-onboarding-03.png" alt="">
-                    <div class="title-fea">Họp trực tuyến tin cậy</div>
-                    <div class="content-fea">Thiết lập và tham gia các họp ở bất kì đâu, bất kì lúc nào chỉ với điện
-                        thoại thông minh và kết nối mạng di động</div>
+                    <div class="feature-box">
+                        <div class="stripe">
+                            <img src="../assets/img/icon/Vector 564.png" alt="">
+                            <img src="../assets/img/icon/Ellipse 614.png" alt="">
+                        </div>
+                        <div class="picture-ex"></div>
+                        <div class="title-fea">Họp trực tuyến tin cậy</div>
+                        <div class="content-fea">Thiết lập và tham gia các họp ở bất kì đâu, bất kì lúc nào chỉ với điện
+                            thoại thông minh và kết nối mạng di động</div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
 
-    <!-- TEAM-building---------------------->
-    <section>
+    <!-- TEAM-BUILDING---------------------->
+    <section id="ss2">
         <div id="team-building">
             <div class="title-section-left">
                 <img src="../assets/img/icon/Polygon 1.png" alt="">
@@ -216,7 +209,7 @@
     </section>
 
     <!-- MEETING-ONLINE -->
-    <section>
+    <section id="ss3">
         <div id="meeting-online">
             <div class="title-section-left">
                 <img src="../assets/img/icon/Polygon 1.png" alt="">
@@ -284,7 +277,7 @@
     </section>
 
     <!-- FUNCTION---------------------------- -->
-    <section>
+    <section id="ss4">
         <div class="main-title">
             <div class="bg-title">Chức năng đa dạng</div>
             <div class="sm-title">Hãy cùng khám phá những tính năng hấp dẫn của MeeyTeam</div>
@@ -377,10 +370,6 @@
     <!-- FOOTER------------------------------ -->
     <footer>
         <div id="footer-box">
-            <div class="bgr-footer">
-                <img src="../assets/img/footer.png" alt="">
-            </div>
-
             <div class="main-footer">
                 <div class="content-footer-bx">
                     <div class="content-bx">
@@ -410,9 +399,7 @@
                     </div>
                 </div>
                 <div class="content-footer-bx">
-                    <div class="blur">
-                        <img src="../assets/img/footer-blur.png" alt="">
-                    </div>
+                    <div class="blur"></div>
                     <div class="c-fter c-fter-1">
                         <div class="logo-fter">
                             <img src="../assets/img/icon/logo-trim 2.png" alt="">
@@ -460,6 +447,7 @@
                             <img src="../assets/img/icon/fter-mess.png" alt="chat-me">
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
