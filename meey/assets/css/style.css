@@ -768,19 +768,19 @@ section:nth-child(4) {
 .main-function .col-video {
   padding: 0 40px 0;
 }
-.main-function .col-contents .child-content .arrow,
 .main-function .col-contents .child-content .arrow {
   position: absolute;
   top: 32%;
   display: none;
 }
-.main-function .col-contents:first-child .child-content .arrow {
+.arrow-r {
   right: -11%;
 }
-.main-function .col-contents:last-child .child-content .arrow {
+.arrow-l {
   left: -11%;
   transform: rotate(180deg);
 }
+
 /* FOOTER -------------------------------------------*/
 #footer-box {
   position: relative;
