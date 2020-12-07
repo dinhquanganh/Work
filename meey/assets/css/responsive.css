@@ -1,6 +1,6 @@
 /* RESPONSIVE-------------------------------------------- */
 
-@media only screen and (max-width: 1441px) {
+@media (max-width: 1441px) {
   .banner .content-banner {
     position: absolute;
     top: 20%;
@@ -17,7 +17,7 @@
     transform: rotate(180deg);
   }
 }
-@media only screen and (max-width: 1281px) {
+@media (max-width: 1281px) {
   body {
     overflow-x: hidden;
   }
@@ -37,7 +37,7 @@
   }
 }
 
-@media only screen and (max-width: 1237px) {
+@media (max-width: 1237px) {
   #salient-features .main-feature .feature-row .feature-box {
     width: 340px;
     height: 231px;
@@ -69,13 +69,13 @@
   }
 }
 
-@media only screen and (max-width: 1126px) {
+@media (max-width: 1126px) {
   /* ?\ */
   #meeting-online {
     padding-left: 50vw;
   }
 }
-@media only screen and (max-width: 1025px) {
+@media (max-width: 1025px) {
   section {
     padding: 50px 7vw;
   }
@@ -129,7 +129,7 @@
   }
 }
 
-@media only screen and (max-width: 872px) {
+@media (max-width: 872px) {
   .title-section-left {
     width: 383px;
     font-size: 35px;
@@ -201,7 +201,7 @@
   }
 }
 
-@media only screen and (max-width: 769px) {
+@media (max-width: 769px) {
   #footer-box .main-footer .content-footer-bx:last-child .c-fter-2 {
     padding-right: 50px;
   }

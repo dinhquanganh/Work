@@ -12,9 +12,10 @@
 
 body {
   position: relative;
-
   font-family: meey-medium;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
 }
 li {
   list-style: none;
