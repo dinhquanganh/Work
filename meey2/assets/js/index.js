@@ -4,8 +4,8 @@ let videoFuncMobile = document.getElementById("videoFunction-mobile");
 let myChildrenFunc = document.getElementsByClassName("child-content");
 let myArrowFunc = document.getElementsByClassName("arrow");
 let myIconFunc = document.getElementsByClassName("icon-function");
-let vd1 = document.querySelector(".col-video-1")
-let vd2 = document.querySelector(".col-video-2")
+let vd1 = document.querySelector(".col-video-1");
+let vd2 = document.querySelector(".col-video-2");
 var timeArray = [0, 5, 10, 15, 20, 25];
 if (window.matchMedia("(max-width: 872px)").matches) {
   vd1.style.display = "none";
@@ -93,7 +93,6 @@ window.addEventListener("scroll", () => {
 });
 const menuMobileToggle = document.querySelector(".menu-mobile");
 const menuMobileList = document.querySelector(".menu-mb");
-menuMobileToggle.onclick = function () {
-  menuMobileToggle.classList.toggle("active-menu-mobile");
-  menuMobileList.classList.toggle("active-list");
-};
+
+
+//

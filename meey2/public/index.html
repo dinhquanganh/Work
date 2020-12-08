@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeeyTeam</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
 
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 
 </head>
 
@@ -14,9 +16,7 @@
     <!-- HEADER(NAV+BANNER) -->
     <header>
         <div class="banner">
-            <div class="background-banner">
-                <img src="../assets/img/image 6-banner.svg" alt="">
-            </div>
+            <div class="background-banner"></div>
             <div class="nav">
                 <div class="logo">
                     <img src="../assets/img/logo.svg" alt="logo">
@@ -49,19 +49,11 @@
                             Tải ngay
                         </div>
                     </a>
-                    <div class="menu-mobile">
-                        <div class="bgr-ct"></div>
-                    </div>
-                    <ul class="menu-mb">
-                        <li><a href="#">Tính năng</a></li>
-                        <li><a href="#">Cộng đồng</a></li>
-                        <li><a href="#">Bảo mật</a></li>
-                        <li><a href="#">Trợ giúp</a></li>
-                        <li><a href="#">Liên hệ </a></li>
-                    </ul>
                 </div>
-
-
+                <!--  -->
+                <button id="burger" class="open-main-nav">
+                    <span class="burger"></span>
+                </button>
             </div>
 
             <div class="content-banner">
@@ -82,13 +74,25 @@
             </div>
         </div>
     </header>
+    <!-- MENU-VER MOBILE -->
+    <div class="container" id="container-menu-mb">
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="#ss1">Tính năng</a></li>
+                <li><a href="#ss2">Cộng đồng</a></li>
+                <li><a href="#ss3">Bảo mật</a></li>
+                <li><a href="#ss5">Liên hệ </a></li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- TNH NANG NOI BAT---------------------------- -->
     <section id="ss1">
         <div class="main-title">
             <div class="bg-title">Tính năng nổi bật</div>
             <div class="sm-title">Được xây dựng cho các nhóm hiện đại</div>
         </div>
-        <div class="main-content">
+        <div class="main-content v-destop">
             <div class="col col-img"></div>
             <div class="col col-content">
                 <div class="rw">
@@ -111,6 +115,9 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="main-content v-mobile">
+            
         </div>
     </section>
     <!-- HOI THAO TRUC TUYEN------------------ -->
@@ -335,7 +342,7 @@
                             <li><a href="">Reports</a></li>
                             <li><a href="">Q&A</a></li>
                         </ul>
-                        
+
                     </div>
                 </div>
                 <div class="social-media">
@@ -346,7 +353,7 @@
                     <a href=""><img src="../assets/img/icon/t.svg" alt=""></a>
                     <a href=""><img src="../assets/img/icon/i.svg" alt=""></a>
                 </div>
-                
+
             </div>
             <div class="copyright">
                 © MeeyLand, 2020. All rights reserved.
@@ -354,6 +361,41 @@
         </div>
         <div class="ft"></div>
     </footer>
+    <script>
+
+        let burger = document.getElementById("burger");
+        let nav = document.getElementById("main-nav"),
+            containerMenuMb = document.querySelector("#container-menu-mb");
+        burger.addEventListener("click", async function () {
+            console.log(containerMenuMb.className);
+            if (containerMenuMb.className == "container iO") {
+                await setTimeout(function () {
+                    containerMenuMb.style.zIndex = "-1";
+                }, 400);
+                containerMenuMb.classList.toggle("iO");
+                this.classList.toggle("is-open");
+                nav.classList.toggle("is-open");
+            } else {
+                containerMenuMb.style.zIndex = "100";
+                containerMenuMb.classList.toggle("iO");
+                this.classList.toggle("is-open");
+                nav.classList.toggle("is-open");
+            }
+
+        });
+        let liTg = document.querySelectorAll(".main-nav ul li");
+        for (let i = 0; i < liTg.length; i++) {
+            let elm = liTg[i];
+            elm.onclick = function () {
+                containerMenuMb.classList.remove("iO");
+                burger.classList.remove("is-open");
+                nav.classList.remove("is-open");
+                console.log(containerMenuMb.className);
+            }
+        }
+
+
+    </script>
     <script src="../assets/js/index.js"></script>
 </body>
 
