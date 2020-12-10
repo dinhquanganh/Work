@@ -7,17 +7,23 @@ let myIconFunc = document.getElementsByClassName("icon-function");
 let vd1 = document.querySelector(".col-video-1");
 let vd2 = document.querySelector(".col-video-2");
 var timeArray = [0, 5, 10, 15, 20, 25];
-if (window.matchMedia("(max-width: 872px)").matches) {
-  vd1.style.display = "none";
-  vd2.style.display = "block";
-  videoFuncMobile.ontimeupdate = actionChangeTimelineMobile;
-} else {
-  vd1.style.display = "block";
-  vd2.style.display = "none";
-  videoFunc.ontimeupdate = actionChangeTimeline;
-}
+window.onload = function () {
+  if (window.matchMedia("(max-width: 992px)").matches) {
+    for (let e = 0; e < myChildrenFunc.length; e++) {
+      myChildrenFunc[e].style.display = "none";
+    }
+    vd1.style.display = "none";
+    vd2.style.display = "block";
+    videoFuncMobile.ontimeupdate = actionChangeTimelineMobile;
+  } else {
+    vd1.style.display = "block";
+    vd2.style.display = "none";
+    videoFunc.ontimeupdate = actionChangeTimeline;
+  }
+};
 
 function actionChangeTimeline() {
+  console.log("1");
   let currentTime = videoFunc.currentTime;
   let chooseTime;
   for (let i = 0; i < timeArray.length; i++) {
@@ -38,7 +44,7 @@ function actionChangeTimeline() {
   }
 }
 function actionChangeTimelineMobile() {
-  let currentTime = videoFunc.currentTime;
+  let currentTime = videoFuncMobile.currentTime;
   let chooseTime;
   for (let i = 0; i < timeArray.length; i++) {
     if (i !== timeArray.length - 1) {
@@ -48,10 +54,10 @@ function actionChangeTimelineMobile() {
       chooseTime = currentTime >= timeArray[i];
     }
     if (chooseTime === true) {
-      removeActive();
       for (let e = 0; e < myChildrenFunc.length; e++) {
         myChildrenFunc[e].style.display = "none";
       }
+      removeActive();
       let thisDoc = document.querySelector(`div[data-time="${timeArray[i]}s"]`);
       thisDoc.classList.add("active");
       thisDoc.children[0].style.filter = "saturate(8)";
@@ -93,6 +99,5 @@ window.addEventListener("scroll", () => {
 });
 const menuMobileToggle = document.querySelector(".menu-mobile");
 const menuMobileList = document.querySelector(".menu-mb");
-
 
 //
