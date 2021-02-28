@@ -1,0 +1,100 @@
+variables:
+  sshkey: "SSH_KEY"
+  domain: "ico.aeit.club"
+
+stages:
+  - setenv
+  - request
+  - deploy
+  - notify
+
+before_script:
+  - date >> /tmp/gitlabci.log
+  - echo "DEPLOY INFO:" >> /tmp/gitlabci.log
+
+
+
+  
+###
+
+setenv to MEEY-PRO-WEB01 on production:
+  environment: production
+  resource_group: production
+  stage: setenv
+  tags:
+    - MEEY-PRO-WEB01
+  only:
+    - master
+  script:
+    - mkdir /var/www/html/project/ico.aeit.club
+    - sudo chown -R apache.apache /var/www/html/project/ico.aeit.club
+  allow_failure: true
+
+#setenv to MEEY-PRO-WEB02 on production:
+#  environment: production
+#  resource_group: production
+#  stage: setenv
+#  tags:
+#    - MEEY-PRO-WEB02
+#  only:
+#    - master
+#  script:
+#    - mkdir /var/www/html/project/ico.aeit.club
+#    - sudo chown -R apache.apache /var/www/html/project/ico.aeit.club
+#  allow_failure: true
+ 
+
+request deploy to production:
+  environment: production
+  stage: request
+  tags:
+    - MEEY-PRO-WEB01
+  only:
+    - master
+  script:
+    - /usr/bin/python /opt/ansible/scripts/SendTele.py "ADMINISTRATOR NEED SUMMIT FOR DEPLOY ${domain} TO PRODUCTION!"
+
+deploy to MEEY-PRO-WEB01 on production:
+  environment: production
+  resource_group: production
+  stage: deploy
+  tags:
+    - MEEY-PRO-WEB01
+  only:
+    - master
+  script:
+    - cp -r ./* /var/www/html/project/ico.aeit.club/
+    - sudo chown -R apache.apache /var/www/html/project/ico.aeit.club/
+    - /usr/bin/python /opt/ansible/scripts/SendTele.py "${GITLAB_USER_NAME} => Deploy ${CI_PROJECT_NAME} to PRODUCTION! Server MEEY-PRO-WEB01! Success!"
+  #when: manual
+  allow_failure: false
+
+#deploy to MEEY-PRO-WEB02 on production:
+#  environment: production
+#  resource_group: production
+#  stage: deploy
+#  tags:
+#    - MEEY-PRO-WEB02
+#  only:
+#    - master
+#  script:
+#    - cp -r ./* /var/www/html/project/ico.aeit.club/
+#    - sudo chown -R apache.apache /var/www/html/project/ico.aeit.club/
+#    - /usr/bin/python /opt/ansible/scripts/SendTele.py "${GITLAB_USER_NAME} => Deploy ${CI_PROJECT_NAME} to PRODUCTION! Server MEEY-PRO-WEB02! Success!"
+#  #when: manual
+#  allow_failure: false
+
+
+notify deploy failed to production:
+  environment: production
+  resource_group: production
+  stage: notify
+  tags:
+    - MEEY-PRO-WEB01
+  only:
+    - master
+  script:
+    - /usr/bin/python /opt/ansible/scripts/SendTele.py "FAIL!!! ${GITLAB_USER_NAME} deploy ${CI_PROJECT_NAME} to PRODUCTION! Failed!"
+  when: on_failure
+
+

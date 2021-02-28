@@ -294,14 +294,24 @@ ul {
 
 /*Main*/
 .section_top {
-  /* background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat; */
   min-height: 825px;
   padding: 25px 0;
   color: #fff;
   position: relative;
   overflow: hidden;
+}
+.navbar-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 101vw;
+  background: rgba(0, 5, 53, 0.8);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  height: 10vh;
+  z-index: 1000;
+  padding: 0 100px;
 }
 .section_top #my-intro {
   width: 100%;
@@ -312,6 +322,7 @@ ul {
   left: 0;
   object-fit: cover;
 }
+
 .section_top ul.box_menu {
   list-style-type: none;
   margin: 0;
@@ -322,23 +333,25 @@ ul {
 .section_top ul.box_menu li.menu_item {
   float: left;
 }
-.section_top img 
-{
+
+.section_top img {
   width: 220px;
 }
+
 .section_top ul.box_menu li.menu_item a {
   display: block;
-  background: linear-gradient(90deg, #6f4ac7 0.12%, #57e6fd 99.24%);
+  background: linear-gradient(90deg, #fff 0.12%, #fff 99.24%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   padding: 15px;
   text-decoration: none;
   font-size: 15pt;
+  transition: all 0.3s linear;
 }
 
 .section_top ul.box_menu li.menu_item a:hover {
-  background: linear-gradient(90deg, #fff 0.12%, #fff 99.24%);
+  background: linear-gradient(90deg, #6f4ac7 0.12%, #57e6fd 99.24%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -365,9 +378,14 @@ ul {
 }
 
 .section_top .content_section_top {
-  margin-top: 5%;
+  margin-top: 20%;
+  margin-left: 0;
 }
-
+.section_about.web-ver,
+.section_frame.web-ver,
+.section_timeline.web-ver {
+  padding: 100px 0 50px;
+}
 .section_about {
   background-size: cover;
   background-position-x: center;
@@ -501,7 +519,7 @@ ul {
 }
 
 .section_timeline .swiper-slide .row img {
-  height: 250px;
+  height: 270px;
   width: 100%;
 }
 
@@ -545,6 +563,23 @@ ul {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
     0 0 8px rgba(102, 175, 233, 0.6);
   color: #fff;
+}
+.section_timeline textarea {
+  background: transparent !important;
+  background: linear-gradient(90deg, #6f4ac7 0.12%, #57e6fd 99.24%);
+  -webkit-background-clip: border;
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
+  color: #fff;
+  height: 95px;
+  resize: none;
+}
+.form-control {
+  margin-bottom: 10px;
 }
 
 .section_timeline p.option-contact {
@@ -614,6 +649,7 @@ footer .row .col-md-6:last-child p {
   top: 0;
   left: 0;
 }
+
 .modal-content .modal-background img {
   object-fit: cover;
 }
@@ -621,18 +657,21 @@ footer .row .col-md-6:last-child p {
 .modal-content .modal-body {
   height: 100%;
 }
+
 .modal-content .modal-prev,
 .modal-content .modal-next {
   background: transparent;
   position: absolute;
   top: 48%;
   opacity: 40%;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.modal-content  .modal-prev {
+
+.modal-content .modal-prev {
   left: 20px;
 }
-.modal-content  .modal-next {
+
+.modal-content .modal-next {
   right: 20px;
 }
 
@@ -640,6 +679,7 @@ footer .row .col-md-6:last-child p {
 .modal-content .modal-next:hover {
   opacity: 90%;
 }
+
 .modal-content .modal-title {
   text-align: center;
   padding: 20px;
@@ -648,6 +688,7 @@ footer .row .col-md-6:last-child p {
   font-size: 18px;
   color: #fff;
 }
+
 .modal-content .modal-main-content {
   height: 70%;
   padding: 20px 100px;
@@ -666,6 +707,7 @@ footer .row .col-md-6:last-child p {
   align-items: center;
   margin-right: 4rem;
 }
+
 .modal-content .modal-main-content .modal-text {
   width: 60%;
   font-style: normal;
@@ -673,8 +715,6 @@ footer .row .col-md-6:last-child p {
   line-height: 24px;
   color: #fff;
 }
-
-
 
 /* END MODAL--------------------------- */
 
@@ -698,6 +738,7 @@ footer .row .col-md-6:last-child p {
   top: 0;
   left: 0;
 }
+
 .modal-content-mobile .modal-background img {
   object-fit: cover;
 }
@@ -705,19 +746,22 @@ footer .row .col-md-6:last-child p {
 .modal-content-mobile .modal-body {
   height: 100%;
 }
+
 .modal-content-mobile .modal-prev,
 .modal-content-mobile .modal-next {
   background: transparent;
   position: absolute;
   top: 10px;
   opacity: 40%;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 50px;
 }
-.modal-content-mobile  .modal-prev {
+
+.modal-content-mobile .modal-prev {
   left: 10px;
 }
-.modal-content-mobile  .modal-next {
+
+.modal-content-mobile .modal-next {
   left: 66px;
 }
 
@@ -725,6 +769,7 @@ footer .row .col-md-6:last-child p {
 .modal-content-mobile .modal-next:hover {
   opacity: 90%;
 }
+
 .modal-content-mobile .modal-title {
   text-align: center;
   padding: 40px 10px 20px 20px;
@@ -733,6 +778,7 @@ footer .row .col-md-6:last-child p {
   font-size: 18px;
   color: #fff;
 }
+
 .modal-content-mobile .modal-main-content {
   height: 85%;
   padding: 20px 20px;
@@ -750,9 +796,11 @@ footer .row .col-md-6:last-child p {
   align-items: center;
   margin-bottom: 10px;
 }
+
 .modal-content-mobile .modal-main-content .modal-img img {
   margin: 0 auto;
 }
+
 .modal-content-mobile .modal-main-content .modal-text {
   width: 100%;
   height: 70%;
@@ -762,10 +810,18 @@ footer .row .col-md-6:last-child p {
   color: #fff;
   text-overflow: ellipsis;
   overflow: hidden;
-
-  
 }
-
+@media only screen and (min-width: 1680px) {
+  .container {
+    width: 70%;
+  }
+  .navbar-main {
+    padding: 0 275px;
+  }
+  .section_top ul.box_menu {
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 1680px) {
   .section_frame .container {
     background-size: 75%;
@@ -858,6 +914,7 @@ footer .row .col-md-6:last-child p {
     overflow: hidden;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .modal-content {
     width: 950px;
@@ -1080,7 +1137,7 @@ footer .row .col-md-6:last-child p {
   }
 
   .section_top .content_section_top {
-    margin-top: 22%;
+    margin-top: 55%;
   }
 
   footer p {
@@ -1116,6 +1173,3 @@ footer .row .col-md-6:last-child p {
 
 @media only screen and (max-width: 320px) {
 }
-
-
-

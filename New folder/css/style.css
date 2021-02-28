@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 50px;
+}
+
+nav .btn-header {
+  padding: 10px 20px;
+  background: rgb(21, 23, 194);
+  border-radius: 10px;
+  border: 3px solid black;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+header .container {
+  width: 100vw;
+  height: 100vh;
+  background: url(../image/background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.container .box-header {
+  padding: 10px 20px;
+  position: relative;
+  width: 520px;
+  margin-left: 300px;
+  margin-top: 150px;
+}
+.container .box-header img {
+  position: absolute;
+}
+.container .box-header img:first-child {
+  top: 0%;
+  left: 0%;
+}
+.container .box-header .last-i {
+  bottom: -10%;
+  right: 0;
+}
+
+.container .box-header p {
+  color: #fff;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: aqua;
+}
+
+.container .box-header p:last-child {
+  color: #fff;
+  font-size: 100px;
+}
+
+#how {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  width: 100%;
+}
+
+#how .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#how .row .col {
+  display: flex;
+  flex-direction: column;
+}
+#how .row .col .title {
+  margin-left: 40px;
+}
+#how .row .col p {
+  margin-top: 20px;
+}

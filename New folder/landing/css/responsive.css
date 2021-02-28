@@ -1,0 +1,40 @@
+@media (max-width: 1200px) {
+  .risk-info-title {
+    height: 140px;
+  }
+  .policy-container {
+    justify-content: center;
+  }
+  .policy-container .row {
+    width: 100%;
+    margin: 0;
+  }
+  .policy-box {
+    width: 100%;
+  }
+  .policy-inner-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-risk {
+    width: 100%;
+  }
+  .row.mt-280 {
+    margin-top: 185px;
+  }
+  .mt-5.risk {
+    height: 1090px;
+    overflow: hidden;
+  }
+  .risk-info-title {
+    height: 80px;
+  }
+  .risk-info-des {
+    margin-bottom: 190px;
+  }
+  .item-risk-last {
+    margin: 0 auto;
+  }
+}

@@ -92,6 +92,11 @@ function tgMenuLang() {
   const tgMenu = document.querySelector(".list-lang-menu");
   tgMenu.classList.toggle("activeTg");
 }
+function tgMenuLangMb() {
+  const tgMenuMb = document.querySelector(".list-lang-menu-mb");
+  tgMenuMb.classList.toggle("activeTgMb");
+  alert(true);
+}
 
 // Scroll
 window.addEventListener("scroll", () => {

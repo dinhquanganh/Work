@@ -183,6 +183,7 @@ section {
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
 }
 .nav #language-download .lang .list-lang-menu.activeTg {
   top: 40px;
